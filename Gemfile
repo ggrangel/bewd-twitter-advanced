@@ -27,16 +27,14 @@ gem 'jbuilder', '~> 2.11'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1'
 
-
-gem "image_processing", ">= 1.2"
-gem 'aws-sdk', '~> 3.0'
-
+gem 'aws-sdk-s3', require: false
+gem 'image_processing', '>= 1.2'
 
 # AWS S3
-gem 'aws-sdk-s3', '~> 1.112'
+# gem 'aws-sdk-s3', '~> 1.112'
 
 # Webrick
-gem "webrick", "~> 1.7"
+gem 'webrick', '~> 1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -49,7 +47,7 @@ gem 'bootsnap', '>= 1.10.3', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', '~> 11.1.3', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', '~> 11.1.3', platforms: %i[mri mingw x64_mingw]
 
   # Added by Altcademy.com
   gem 'awesome_print', '~> 1.9'
@@ -61,8 +59,8 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 4.0.1'
   gem 'listen', '~> 3.7.1'
+  gem 'web-console', '>= 4.0.1'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '< 3.0'
   gem 'spring-watcher-listen', '~> 2.0.1'
