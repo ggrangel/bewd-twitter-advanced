@@ -55,6 +55,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2'
   gem 'pry-rails', '>= 0.3.9'
   gem 'rspec-rails', '~> 5.1'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -66,10 +67,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.1'
 
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4.2'
+  # gem 'sqlite3', '~> 1.4.2'
 end
 
 group :production do
   # Use pg as the database for Active Record
-  # gem 'pg', '~> 1.3.1'
+  gem 'pg', '~> 1.3.1'
 end
